@@ -1,0 +1,153 @@
+/* Global */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    background: #F4F4F4;
+    overflow: hidden;
+}
+
+/* Header section - includes header, input, and convert button. */
+
+.head-container {
+    background: #6943FF;
+    height: 40%;
+}
+
+.head {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2.5em;
+    user-select: none;
+    white-space: nowrap;
+}
+
+#unit-input {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 5.5em;
+    width: 5em;
+    font-weight: bold;
+    background: #6943FF;
+    color: #fff;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: solid 2px #B295FF;
+    border-radius: 5px;
+    outline: none;
+    margin-top: .6em;
+    margin-bottom: .45em;
+}
+
+#unit-input::selection {
+    background-color: #6943FF;
+}
+
+#unit-input:active {
+    user-select: none;
+}
+
+input::placeholder {
+    font-size: .8em;
+    color: #B295FF;
+}
+
+input:focus::placeholder {
+    color: #6943FF;
+}
+
+/* Keeping this here for possible future reference
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} */
+
+#convert-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    background: #fff;
+    border-radius: 5px;
+    padding: 11px 27px;
+    outline: none;
+    border: none;
+}
+
+/* Converted units section - contains converted units in length, volume, and mass.  */
+
+.conversion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+}
+
+.units {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 90%;
+    height: 11.5em;
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    border-radius: 5px;
+}
+
+.unit-style {
+    color: #5A537B;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+#length,
+#volume,
+#mass {
+    font-size: 1.5em;
+    padding: 2px 35px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+
+    .head-container {
+        font-size: .5em;
+        height: 50%;
+    }
+
+    #convert-btn {
+        font-size: 2em;
+    }
+
+    .conversion-container {
+        font-size: .6em;
+        height: 50%;
+    }
+
+    .unit-style {
+        padding: 2px 8px;
+    }
+
+    #length,
+    #volume,
+    #mass {
+        padding: 2px 20px;
+    }
+
+}
